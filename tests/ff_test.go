@@ -33,7 +33,7 @@ import (
 
 // If this is enabled testSameMarshal and testCycle will output failures to files
 // for easy debugging.
-var outputFileOnError = false
+var outputFileOnError = true
 
 func newLogRecord() *Record {
 	return &Record{
@@ -202,10 +202,10 @@ func testType(t *testing.T, base interface{}, ff interface{}) {
 }
 
 func testSameMarshal(t *testing.T, base interface{}, ff interface{}) {
-	bufbase, err := json.Marshal(base)
+	bufbase, err := json.MarshalIndent(base, " ", "  ")
 	require.NoError(t, err, "base[%T] failed to Marshal", base)
 
-	bufff, err := json.Marshal(ff)
+	bufff, err := json.MarshalIndent(ff, " ", "  ")
 	require.NoError(t, err, "ff[%T] failed to Marshal", ff)
 
 	if outputFileOnError {
@@ -230,7 +230,7 @@ func testSameMarshal(t *testing.T, base interface{}, ff interface{}) {
 func testCycle(t *testing.T, base interface{}, ff interface{}) {
 	setXValue(t, base)
 
-	buf, err := json.Marshal(base)
+	buf, err := json.MarshalIndent(base, " ", "  ")
 	require.NoError(t, err, "base[%T] failed to Marshal", base)
 
 	ffDst := emptyInterface(ff)

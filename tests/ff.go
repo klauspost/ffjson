@@ -722,6 +722,360 @@ type FfFuzz struct {
 }
 
 // ffjson: skip
+type FuzzOmitEmpty struct {
+	A uint8  `json:",omitempty"`
+	B uint16 `json:",omitempty"`
+	C uint32 `json:",omitempty"`
+	D uint64 `json:",omitempty"`
+
+	E int8  `json:",omitempty"`
+	F int16 `json:",omitempty"`
+	G int32 `json:",omitempty"`
+	H int64 `json:",omitempty"`
+
+	I float32 `json:",omitempty"`
+	J float64 `json:",omitempty"`
+
+	M byte `json:",omitempty"`
+	N rune `json:",omitempty"`
+
+	O int       `json:",omitempty"`
+	P uint      `json:",omitempty"`
+	Q string    `json:",omitempty"`
+	R bool      `json:",omitempty"`
+	S time.Time `json:",omitempty"`
+
+	Ap *uint8  `json:",omitempty"`
+	Bp *uint16 `json:",omitempty"`
+	Cp *uint32 `json:",omitempty"`
+	Dp *uint64 `json:",omitempty"`
+
+	Ep *int8  `json:",omitempty"`
+	Fp *int16 `json:",omitempty"`
+	Gp *int32 `json:",omitempty"`
+	Hp *int64 `json:",omitempty"`
+
+	Ip *float32 `json:",omitempty"`
+	Jp *float64 `json:",omitempty"`
+
+	Mp *byte `json:",omitempty"`
+	Np *rune `json:",omitempty"`
+
+	Op *int       `json:",omitempty"`
+	Pp *uint      `json:",omitempty"`
+	Qp *string    `json:",omitempty"`
+	Rp *bool      `json:",omitempty"`
+	Sp *time.Time `json:",omitempty"`
+
+	Aa []uint8  `json:",omitempty"`
+	Ba []uint16 `json:",omitempty"`
+	Ca []uint32 `json:",omitempty"`
+	Da []uint64 `json:",omitempty"`
+
+	Ea []int8  `json:",omitempty"`
+	Fa []int16 `json:",omitempty"`
+	Ga []int32 `json:",omitempty"`
+	Ha []int64 `json:",omitempty"`
+
+	Ia []float32 `json:",omitempty"`
+	Ja []float64 `json:",omitempty"`
+
+	Ma []byte `json:",omitempty"`
+	Na []rune `json:",omitempty"`
+
+	Oa []int    `json:",omitempty"`
+	Pa []uint   `json:",omitempty"`
+	Qa []string `json:",omitempty"`
+	Ra []bool   `json:",omitempty"`
+
+	Aap []*uint8  `json:",omitempty"`
+	Bap []*uint16 `json:",omitempty"`
+	Cap []*uint32 `json:",omitempty"`
+	Dap []*uint64 `json:",omitempty"`
+
+	Eap []*int8  `json:",omitempty"`
+	Fap []*int16 `json:",omitempty"`
+	Gap []*int32 `json:",omitempty"`
+	Hap []*int64 `json:",omitempty"`
+
+	Iap []*float32 `json:",omitempty"`
+	Jap []*float64 `json:",omitempty"`
+
+	Map []*byte `json:",omitempty"`
+	Nap []*rune `json:",omitempty"`
+
+	Oap []*int    `json:",omitempty"`
+	Pap []*uint   `json:",omitempty"`
+	Qap []*string `json:",omitempty"`
+	Rap []*bool   `json:",omitempty"`
+}
+
+type FfFuzzOmitEmpty struct {
+	A uint8  `json:",omitempty"`
+	B uint16 `json:",omitempty"`
+	C uint32 `json:",omitempty"`
+	D uint64 `json:",omitempty"`
+
+	E int8  `json:",omitempty"`
+	F int16 `json:",omitempty"`
+	G int32 `json:",omitempty"`
+	H int64 `json:",omitempty"`
+
+	I float32 `json:",omitempty"`
+	J float64 `json:",omitempty"`
+
+	M byte `json:",omitempty"`
+	N rune `json:",omitempty"`
+
+	O int       `json:",omitempty"`
+	P uint      `json:",omitempty"`
+	Q string    `json:",omitempty"`
+	R bool      `json:",omitempty"`
+	S time.Time `json:",omitempty"`
+
+	Ap *uint8  `json:",omitempty"`
+	Bp *uint16 `json:",omitempty"`
+	Cp *uint32 `json:",omitempty"`
+	Dp *uint64 `json:",omitempty"`
+
+	Ep *int8  `json:",omitempty"`
+	Fp *int16 `json:",omitempty"`
+	Gp *int32 `json:",omitempty"`
+	Hp *int64 `json:",omitempty"`
+
+	Ip *float32 `json:",omitempty"`
+	Jp *float64 `json:",omitempty"`
+
+	Mp *byte `json:",omitempty"`
+	Np *rune `json:",omitempty"`
+
+	Op *int       `json:",omitempty"`
+	Pp *uint      `json:",omitempty"`
+	Qp *string    `json:",omitempty"`
+	Rp *bool      `json:",omitempty"`
+	Sp *time.Time `json:",omitempty"`
+
+	Aa []uint8  `json:",omitempty"`
+	Ba []uint16 `json:",omitempty"`
+	Ca []uint32 `json:",omitempty"`
+	Da []uint64 `json:",omitempty"`
+
+	Ea []int8  `json:",omitempty"`
+	Fa []int16 `json:",omitempty"`
+	Ga []int32 `json:",omitempty"`
+	Ha []int64 `json:",omitempty"`
+
+	Ia []float32 `json:",omitempty"`
+	Ja []float64 `json:",omitempty"`
+
+	Ma []byte `json:",omitempty"`
+	Na []rune `json:",omitempty"`
+
+	Oa []int    `json:",omitempty"`
+	Pa []uint   `json:",omitempty"`
+	Qa []string `json:",omitempty"`
+	Ra []bool   `json:",omitempty"`
+
+	Aap []*uint8  `json:",omitempty"`
+	Bap []*uint16 `json:",omitempty"`
+	Cap []*uint32 `json:",omitempty"`
+	Dap []*uint64 `json:",omitempty"`
+
+	Eap []*int8  `json:",omitempty"`
+	Fap []*int16 `json:",omitempty"`
+	Gap []*int32 `json:",omitempty"`
+	Hap []*int64 `json:",omitempty"`
+
+	Iap []*float32 `json:",omitempty"`
+	Jap []*float64 `json:",omitempty"`
+
+	Map []*byte `json:",omitempty"`
+	Nap []*rune `json:",omitempty"`
+
+	Oap []*int    `json:",omitempty"`
+	Pap []*uint   `json:",omitempty"`
+	Qap []*string `json:",omitempty"`
+	Rap []*bool   `json:",omitempty"`
+}
+
+// ffjson: skip
+type FuzzString struct {
+	A uint8  `json:",string"`
+	B uint16 `json:",string"`
+	C uint32 `json:",string"`
+	D uint64 `json:",string"`
+
+	E int8  `json:",string"`
+	F int16 `json:",string"`
+	G int32 `json:",string"`
+	H int64 `json:",string"`
+
+	I float32 `json:",string"`
+	J float64 `json:",string"`
+
+	M byte `json:",string"`
+	N rune `json:",string"`
+
+	O int       `json:",string"`
+	P uint      `json:",string"`
+	Q string    `json:",string"`
+	R bool      `json:",string"`
+	S time.Time `json:",string"`
+
+	Ap *uint8  `json:",string"`
+	Bp *uint16 `json:",string"`
+	Cp *uint32 `json:",string"`
+	Dp *uint64 `json:",string"`
+
+	Ep *int8  `json:",string"`
+	Fp *int16 `json:",string"`
+	Gp *int32 `json:",string"`
+	Hp *int64 `json:",string"`
+
+	Ip *float32 `json:",string"`
+	Jp *float64 `json:",string"`
+
+	Mp *byte `json:",string"`
+	Np *rune `json:",string"`
+
+	Op *int       `json:",string"`
+	Pp *uint      `json:",string"`
+	Qp *string    `json:",string"`
+	Rp *bool      `json:",string"`
+	Sp *time.Time `json:",string"`
+
+	Aa []uint8  `json:",string"`
+	Ba []uint16 `json:",string"`
+	Ca []uint32 `json:",string"`
+	Da []uint64 `json:",string"`
+
+	Ea []int8  `json:",string"`
+	Fa []int16 `json:",string"`
+	Ga []int32 `json:",string"`
+	Ha []int64 `json:",string"`
+
+	Ia []float32 `json:",string"`
+	Ja []float64 `json:",string"`
+
+	Ma []byte `json:",string"`
+	Na []rune `json:",string"`
+
+	Oa []int    `json:",string"`
+	Pa []uint   `json:",string"`
+	Qa []string `json:",string"`
+	Ra []bool   `json:",string"`
+
+	Aap []*uint8  `json:",string"`
+	Bap []*uint16 `json:",string"`
+	Cap []*uint32 `json:",string"`
+	Dap []*uint64 `json:",string"`
+
+	Eap []*int8  `json:",string"`
+	Fap []*int16 `json:",string"`
+	Gap []*int32 `json:",string"`
+	Hap []*int64 `json:",string"`
+
+	Iap []*float32 `json:",string"`
+	Jap []*float64 `json:",string"`
+
+	Map []*byte `json:",string"`
+	Nap []*rune `json:",string"`
+
+	Oap []*int    `json:",string"`
+	Pap []*uint   `json:",string"`
+	Qap []*string `json:",string"`
+	Rap []*bool   `json:",string"`
+}
+
+type FfFuzzString struct {
+	A uint8  `json:",string"`
+	B uint16 `json:",string"`
+	C uint32 `json:",string"`
+	D uint64 `json:",string"`
+
+	E int8  `json:",string"`
+	F int16 `json:",string"`
+	G int32 `json:",string"`
+	H int64 `json:",string"`
+
+	I float32 `json:",string"`
+	J float64 `json:",string"`
+
+	M byte `json:",string"`
+	N rune `json:",string"`
+
+	O int       `json:",string"`
+	P uint      `json:",string"`
+	Q string    `json:",string"`
+	R bool      `json:",string"`
+	S time.Time `json:",string"`
+
+	Ap *uint8  `json:",string"`
+	Bp *uint16 `json:",string"`
+	Cp *uint32 `json:",string"`
+	Dp *uint64 `json:",string"`
+
+	Ep *int8  `json:",string"`
+	Fp *int16 `json:",string"`
+	Gp *int32 `json:",string"`
+	Hp *int64 `json:",string"`
+
+	Ip *float32 `json:",string"`
+	Jp *float64 `json:",string"`
+
+	Mp *byte `json:",string"`
+	Np *rune `json:",string"`
+
+	Op *int       `json:",string"`
+	Pp *uint      `json:",string"`
+	Qp *string    `json:",string"`
+	Rp *bool      `json:",string"`
+	Sp *time.Time `json:",string"`
+
+	Aa []uint8  `json:",string"`
+	Ba []uint16 `json:",string"`
+	Ca []uint32 `json:",string"`
+	Da []uint64 `json:",string"`
+
+	Ea []int8  `json:",string"`
+	Fa []int16 `json:",string"`
+	Ga []int32 `json:",string"`
+	Ha []int64 `json:",string"`
+
+	Ia []float32 `json:",string"`
+	Ja []float64 `json:",string"`
+
+	Ma []byte `json:",string"`
+	Na []rune `json:",string"`
+
+	Oa []int    `json:",string"`
+	Pa []uint   `json:",string"`
+	Qa []string `json:",string"`
+	Ra []bool   `json:",string"`
+
+	Aap []*uint8  `json:",string"`
+	Bap []*uint16 `json:",string"`
+	Cap []*uint32 `json:",string"`
+	Dap []*uint64 `json:",string"`
+
+	Eap []*int8  `json:",string"`
+	Fap []*int16 `json:",string"`
+	Gap []*int32 `json:",string"`
+	Hap []*int64 `json:",string"`
+
+	Iap []*float32 `json:",string"`
+	Jap []*float64 `json:",string"`
+
+	Map []*byte `json:",string"`
+	Nap []*rune `json:",string"`
+
+	Oap []*int    `json:",string"`
+	Pap []*uint   `json:",string"`
+	Qap []*string `json:",string"`
+	Rap []*bool   `json:",string"`
+}
+
+// ffjson: skip
 type TTestMaps struct {
 	Aa map[string]uint8
 	Ba map[string]uint16
